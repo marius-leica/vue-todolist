@@ -44,7 +44,8 @@
                                                     :for="`flexSwitchCheck${index}`"></label>
                                             </div>
                                             {{ task.text }}
-                                            <button type="button" class="btn btn-danger" v-on:click="removeTask"><i
+                                            <button type="button" class="btn btn-danger"
+                                                v-on:click="removeTask(index)"><i
                                                     class="fa-solid fa-xmark"></i></button>
                                         </li>
                                     </ul>

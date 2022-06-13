@@ -45,6 +45,8 @@ const app = new Vue({
     newTask: "",
   },
   methods: {
+    //oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
+
     removeTask: function (index) {
       this.todos.splice(index, 1);
     },
@@ -53,6 +55,7 @@ const app = new Vue({
         text: this.newTask,
         done: false,
       });
+      this.newTask = "";
     },
   },
 });
