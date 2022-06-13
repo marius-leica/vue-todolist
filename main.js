@@ -7,6 +7,10 @@
 
 Stampare all’interno di una lista, un item per ogni todo.
 Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
+
+# MILESTONE 2
+
+Visualizzare a fianco ad ogni item una “x”: cliccando su di essa, senza chiedere all’utente conferma, il todo viene rimosso dalla lista.
 */
 
 const todos = [
@@ -30,7 +34,11 @@ const app = new Vue({
   data: {
     todos: todos,
   },
-  methods: {},
+  methods: {
+    removeTask: function (index) {
+      this.todos.splice(index, 1);
+    },
+  },
 });
 // backtick = `// newTodo: "",
 //     addTodo: function () {
