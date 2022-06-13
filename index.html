@@ -49,11 +49,12 @@
                                         </li>
                                     </ul>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" v-model="newTodo"
+                                        <input type="text" class="form-control" v-model="newTask"
                                             placeholder="Add new todo">
                                     </div>
                                     <div class="position-relative"><button type="button" class="btn btn-primary btn-lg rounded-circle position-absolute top-100
-                                            start-50 translate-middle"><i class="fa-solid fa-plus"></i></button></div>
+                                            start-50 translate-middle" @click="addTask" @keyup.enter="addTask"><i
+                                                class=" fa-solid fa-plus"></i></button></div>
 
 
                                 </div>
