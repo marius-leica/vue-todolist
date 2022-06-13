@@ -34,7 +34,17 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <ul class="list-group">
-                                        <li class="list-group-item" v-for="task in todos">{{ task.text }}</li>
+                                        <li class="list-group-item d-flex justify-content-between "
+                                            :class="{'text-decoration-line-through': todos[index].done}"
+                                            v-for="(task, index) in todos">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch"
+                                                    :id="`flexSwitchCheck${index}`" v-model="todos[index].done">
+                                                <label class="form-check-label"
+                                                    :for="`flexSwitchCheck${index}`"></label>
+                                            </div>
+                                            {{ task.text }}
+                                        </li>
                                     </ul>
                                     <div class="form-group">
                                         <input type="text" class="form-control" v-model="newTodo"
