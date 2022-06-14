@@ -51,11 +51,13 @@ const app = new Vue({
       this.todos.splice(index, 1);
     },
     addTask: function () {
-      this.todos.push({
-        text: this.newTask,
-        done: false,
-      });
-      this.newTask = "";
+      if (this.newTask !== "") {
+        this.todos.push({
+          text: this.newTask,
+          done: false,
+        });
+        this.newTask = "";
+      }
     },
   },
 });
